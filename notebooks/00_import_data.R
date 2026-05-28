@@ -15,3 +15,5 @@ req<-request(NSSP_Combined_ED_Visits_ENDPOINT)|>
 json_test<-req|>
   req_perform()|>
   resp_body_json(simplifyVector = TRUE)
+
+unique(json_out$week_end)
