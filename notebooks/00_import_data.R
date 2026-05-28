@@ -8,7 +8,9 @@ API_token<-Sys.getenv("Socrata-token")
 header_list<-list("Accept" == "application/json")
 
 req<-request(NSSP_Combined_ED_Visits_ENDPOINT)|>
-  req_headers(Accept = "application/json", limit = "100000", X-App-Token = API_token)
+  req_headers_redacted(Accept = "application/json", 
+  limit = "100000", 
+  "X-App-Token" = API_token)
   
 
   
