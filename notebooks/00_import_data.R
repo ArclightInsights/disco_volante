@@ -12,5 +12,6 @@ req<-request(NSSP_Combined_ED_Visits_ENDPOINT)|>
   limit = "100000", 
   "X-App-Token" = API_token)
   
-
-  
+json_test<-req|>
+  req_perform()|>
+  resp_body_json(simplifyVector = TRUE)
